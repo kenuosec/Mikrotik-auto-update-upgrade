@@ -3,24 +3,20 @@
 ### Automate install from console 
 
 ```
-/tool fetch url="https://raw.githubusercontent.com/maximmum521/Mikrotik-auto-update-upgrade/main/script.rsc"
+/tool fetch url="https://raw.githubusercontent.com/maximmum521/Mikrotik-auto-update-upgrade/main/install.rsc"
 ```
 ```
-import script.rsc
+import install.rsc
+```
+```
+/system/script/run install
 ```
 
-Change in script "/system script" BotId and ChatId on your own Telegram Bot ID and Chat ID 
+### Setings script
+Change in script BotId, ChatId, Email address
 
-    :local BotId "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; 
-    :local ChatId "xxxxxx";
-    
-### Manual install
-
-Make [script](https://raw.githubusercontent.com/maximmum521/Mikrotik-auto-update-upgrade/main/script) "/system script" 
-
-Generate periodic task in "/system scheduler"
-
-Change in script BotId and ChatId on your own Telegram Bot ID and Chat ID 
-
-    :local BotId "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; 
-    :local ChatId "xxxxxx";
+```
+:global BotId "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+:global ChatId "xxxxxx";
+:global Mail xxxxxxxxxxxxxxx;
+```
